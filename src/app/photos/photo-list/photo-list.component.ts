@@ -9,8 +9,9 @@ import { Photo } from 'src/app/photo/photo';
   styleUrls: ['./photo-list.component.css']
 })
 export class PhotoListComponent implements OnInit {
-
+  // properties
   photos: Photo[] = [];
+  filter: string[] = [];
   
   //only for dependency injection
   constructor(
