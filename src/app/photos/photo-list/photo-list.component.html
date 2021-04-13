@@ -12,6 +12,11 @@
 <!-- {{ filter }} -->
 <app-photos [photos]="photos | filterByDescription: filter"></app-photos>
 
+<app-load-button 
+    (click)="load()"
+    [hasMore]="hasMore">
+</app-load-button>
+
 <!-- [] - component => template (view)
 ()  - template (view)  => component -->
 
