@@ -9,8 +9,8 @@
         >
     </form>
 </div>
-{{ filter }}
-<app-photos [photos]="photos"></app-photos>
+<!-- {{ filter }} -->
+<app-photos [photos]="photos | filterByDescription: filter"></app-photos>
 
 <!-- [] - component => template (view)
 ()  - template (view)  => component -->

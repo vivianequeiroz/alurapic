@@ -11,7 +11,7 @@ import { Photo } from 'src/app/photo/photo';
 export class PhotoListComponent implements OnInit {
   // properties
   photos: Photo[] = [];
-  filter: string[] = [];
+  filter: string = '';
   
   //only for dependency injection
   constructor(
