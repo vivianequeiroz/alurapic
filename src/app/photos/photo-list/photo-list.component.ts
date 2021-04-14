@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
-import { Photo } from 'src/app/photo/photo';
-import { PhotoService } from 'src/app/photo/photo.service';
+import { Photo } from 'src/app/photos/photo/photo';
+import { PhotoService } from 'src/app/photos/photo/photo.service';
 
 @Component({
   selector: 'app-photo-list',
