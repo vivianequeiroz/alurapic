@@ -1,4 +1,6 @@
-<app-search></app-search>
+<app-search
+    (onTyping)="filter = $event" [value]="filter">
+</app-search>
 <!-- {{ filter }} -->
 <app-photos [photos]="photos | filterByDescription: filter"></app-photos>
 <app-load-button 
