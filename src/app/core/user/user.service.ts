@@ -9,6 +9,7 @@ import * as jwt_decode from 'jwt-decode';
 export class UserService {
 
     private userSubject = new Subject<User>();
+    private userName: string;
 
     constructor(private tokenService: TokenService) { }
 
@@ -24,11 +25,20 @@ export class UserService {
     private decodeAndNotify() {
         const token = this.tokenService.getToken();
         const user = jwt_decode(token) as User; 
+        this.userName = user.name;
         this.userSubject.next(user);
     }
 
     logout() {
         this.tokenService.removeToken();
         this.userSubject.next(null);
+    }
+
+    isLogged() {
+        return this.tokenService.hasToken();
+    }
+
+    getUserName() {
+        return this.userName;
     }
 }
