@@ -14,6 +14,7 @@ export class UserService {
 
         this.tokenService.hasToken() && 
             this.decodeAndNotify();
+            // teste
     }
 
     setToken(token: string) {
