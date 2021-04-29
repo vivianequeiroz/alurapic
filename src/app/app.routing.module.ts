@@ -11,8 +11,13 @@ import { SignUpComponent } from './home/signup/signup.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+    {
+        path: '', 
+        pathMatch: 'full',
+        redirectTo: 'home'
+    },
     { 
-        path: '',
+        path: 'home',
         component: HomeComponent,
         canActivate: [AuthGuard],
         children: [
