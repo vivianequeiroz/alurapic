@@ -16,6 +16,11 @@ const routes: Routes = [
         path: 'home',
         loadChildren: './home/home.module#HomeModule'
     },
+// In most recent Angular versions, the import method has changed:
+// {
+//     path: 'home', 
+//     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+// }
     {
         path: 'user/:userName',
         component: PhotoListComponent,
@@ -35,9 +40,8 @@ const routes: Routes = [
 
 @NgModule({
     imports: [ 
-        RouterModule.forChild(routes) 
+        RouterModule.forRoot(routes, { useHash: true }) 
     ],
     exports: [ RouterModule ]
 })
 export class AppRoutingModule { }
-

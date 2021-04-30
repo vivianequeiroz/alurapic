@@ -14,11 +14,11 @@ import { AppRoutingModule } from './app.routing.module';
   imports: [
     BrowserModule,
     PhotosModule,
-    AppRoutingModule,
     ErrorsModule,
-    CoreModule
+    CoreModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class HomeModule { }
+export class AppModule { }
