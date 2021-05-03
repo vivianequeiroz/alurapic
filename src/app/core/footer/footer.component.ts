@@ -5,7 +5,7 @@ import { UserService } from '../user/user.service';
 import { User } from '../user/user';
 
 @Component({
-    selector: 'app-footer',
+    selector: 'ap-footer',
     templateUrl: './footer.component.html'
 })
 export class FooterComponent implements OnInit{ 
