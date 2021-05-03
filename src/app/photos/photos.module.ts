@@ -11,6 +11,7 @@ import { PhotoDetailsModule } from './photos-details/photo-details.module';
         PhotoModule,
         PhotoFormModule,
         PhotoListModule,
+        CardModule,
         DarkenOnHoverModule,
         PhotoDetailsModule,
     ]
