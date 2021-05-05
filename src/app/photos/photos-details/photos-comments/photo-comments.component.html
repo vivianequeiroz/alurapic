@@ -13,16 +13,19 @@
         </li>
     </ul>
 
-    <ap-photo-comments [photoId]="photoId">
-    </ap-photo-comments>
     <div class="mt-4">
-        <form>
+        <form [formGroup]="commentForm">
           <div class="input-group">
-            <textarea class="form-control"></textarea>
+            <textarea formControlName="comment" class="form-control"></textarea>
             <div class="input-group-append">
-              <button class="btn btn-primary pull-left">Publish</button>
+              <button [disabled]="commentForm.invalid" type="submit" class="btn btn-primary pull-left">Publish</button>
             </div>
+            <ap-vmessage 
+              text="Maximun size allowed is 300" 
+              *ngIf="commentForm.get('comment').errors?.maxlength">
+            </ap-vmessage> 
           </div>
         </form>
-      </div>
+    </div>
+
 <div>
