@@ -11,9 +11,13 @@
         </small>
 
       
-      <ap-photo-comments [photoId]="photoId">
+      <ap-photo-comments 
+        *ngIf="photo.allowComments; else warning"
+        [photoId]="photoId">
       </ap-photo-comments>
-        
+      <ng-template #warning>
+        <p>User has disabled comments at this photo.</p>
+      </ng-template>
       </div>
     </div>
   </div>
