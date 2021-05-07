@@ -29,13 +29,14 @@ export class PhotoCommentsComponent implements OnInit {
     }
 
     save() {
-        console.log("teste")
+        console.log('Salvando')
         const comment = this.commentForm.get('comment').value as string;
         this.photoService
             .addComment(this.photoId, comment)
-            .subscribe(() =>{
+            .subscribe(() => {
                 this.commentForm.reset();
-                alert('Comentário adicionardo com sucesso')
-            })
+                alert('Comentário adicionado com sucesso');
+            });
+        console.log(this.commentForm);
     }
 }
