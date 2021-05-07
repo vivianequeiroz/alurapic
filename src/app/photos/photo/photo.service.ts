@@ -17,7 +17,7 @@ export class PhotoService {
     }
 
     listFromUserPaginated(userName: string, page: number) {
-        
+
         const params = new HttpParams()
             .append('page', page.toString());
 
@@ -43,7 +43,7 @@ export class PhotoService {
     getComments(photoId: number) {
 
         return this.http.get<PhotoComment[]>(
-            API + '/photos/' + photoId + '/comments'
+           API + '/photos/' + photoId + '/comments'
         );
     }
 
