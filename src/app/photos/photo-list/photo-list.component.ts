@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LoadingService } from 'src/app/shared/loading/loading.service';
 
 import { Photo } from '../photo/photo';
 import { PhotoService } from '../photo/photo.service';
