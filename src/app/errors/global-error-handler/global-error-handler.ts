@@ -1,4 +1,5 @@
 import { ErrorHandler } from '@angular/core';
+import * as StacktTrace from 'stacktrace-js';
 
 
 export class GlobalErrorHandler implements ErrorHandler {
