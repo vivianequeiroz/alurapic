@@ -4,11 +4,11 @@
     <div class="form-group">
         <input #emailInput formControlName="email" placeholder="email" class="form-control" autofocus >
         <ap-vmessage 
-            *ngIf="signupForm.get('email').errors?.required && form.submitted"
+            *ngIf="signupForm.get('email').errors?.required && (form.submitted || signupForm.get('email').touched)"
             text="E-mail is required!">
         </ap-vmessage>  
         <ap-vmessage 
-            *ngIf="signupForm.get('email').errors?.email"
+            *ngIf="signupForm.get('email').errors?.email && (form.submitted || signupForm.get('email').touched)"
             text="Invalid e-mail inserted.">
         </ap-vmessage>  
     </div>
@@ -16,15 +16,15 @@
     <div class="form-group">
         <input formControlName="fullName" placeholder="full name" class="form-control">
         <ap-vmessage 
-           *ngIf="signupForm.get('fullName').errors?.required && form.submitted"
+           *ngIf="signupForm.get('fullName').errors?.required && (form.submitted || signupForm.get('fullName').touched)"
           text="Full name is required!">
         </ap-vmessage> 
         <ap-vmessage 
-           *ngIf="signupForm.get('fullName').errors?.minlength && form.submitted"
+           *ngIf="signupForm.get('fullName').errors?.minlength && (form.submitted || signupForm.get('fullName').touched)"
           text="Minimum length is 2">
         </ap-vmessage> 
         <ap-vmessage 
-           *ngIf="signupForm.get('fullName').errors?.maxlength && form.submitted"
+           *ngIf="signupForm.get('fullName').errors?.maxlength && (form.submitted || signupForm.get('fullName').touched)"
           text="Maximum length is 40">
         </ap-vmessage> 
     </div>
@@ -32,19 +32,19 @@
     <div class="form-group">
         <input formControlName="userName" placeholder="user name" class="form-control">
         <ap-vmessage 
-            *ngIf="signupForm.get('userName').errors?.required && form.submitted"
+            *ngIf="signupForm.get('userName').errors?.required && (form.submitted || signupForm.get('userName').touched)"
             text="Username is required!">
         </ap-vmessage> 
         <ap-vmessage 
-            *ngIf="signupForm.get('userName').errors?.minlength && form.submitted"
+            *ngIf="signupForm.get('userName').errors?.minlength && (form.submitted || signupForm.get('userName').touched)"
             text="Minimum length is 2">
         </ap-vmessage> 
         <ap-vmessage 
-            *ngIf="signupForm.get('userName').errors?.maxlength && form.submitted"
+            *ngIf="signupForm.get('userName').errors?.maxlength && (form.submitted || signupForm.get('userName').touched)"
             text="Maximum length is 30">
         </ap-vmessage> 
         <ap-vmessage 
-            *ngIf="signupForm.get('userName').errors?.lowerCase && form.submitted"
+            *ngIf="signupForm.get('userName').errors?.lowerCase && (form.submitted || signupForm.get('userName').touched)"
             text="Must be lowercase">
         </ap-vmessage> 
         <ap-vmessage
@@ -57,15 +57,15 @@
     <div class="form-group">
         <input formControlName="password" type="password" placeholder="password" class="form-control">
         <ap-vmessage 
-            *ngIf="signupForm.get('password').errors?.required && form.submitted"
+            *ngIf="signupForm.get('password').errors?.required && (form.submitted || signupForm.get('password').touched)"
             text="Password is required!">
         </ap-vmessage> 
         <ap-vmessage 
-            *ngIf="signupForm.get('password').errors?.minlength && form.submitted"
+            *ngIf="signupForm.get('password').errors?.minlength && (form.submitted || signupForm.get('password').touched)"
             text="Minimum length is 8">
         </ap-vmessage> 
         <ap-vmessage 
-            *ngIf="signupForm.get('password').errors?.maxlength && form.submitted"
+            *ngIf="signupForm.get('password').errors?.maxlength && (form.submitted || signupForm.get('password').touched)"
             text="Maximum length is 18">
         </ap-vmessage>
     </div>
